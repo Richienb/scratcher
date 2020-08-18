@@ -40,7 +40,7 @@ const [
 const commonPlugins = [
 	commonjs({ extensions: [".js", ".ts"] }),
 	nodeResolve({ browser: true }),
-	typescript({ target: "esnext" }),
+	typescript({ target: "esnext", esModuleInterop: true }),
 	babel({
 		presets: [
 			["@babel/preset-env", {
