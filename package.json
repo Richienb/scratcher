@@ -1,6 +1,6 @@
 {
 	"name": "scratcher",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Scratch extension development tooling.",
 	"repository": "https://github.com/Richienb/scratcher.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
