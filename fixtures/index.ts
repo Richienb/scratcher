@@ -4,7 +4,7 @@
 class ExampleExtension implements ScratchExtension {
 	getInfo(): ExtensionMetadata {
 		return {
-			id: "Example Extension",
+			id: "ExampleExtension",
 			name: "Greeter",
 			blocks: [{
 				opcode: "greet",
@@ -20,7 +20,7 @@ class ExampleExtension implements ScratchExtension {
 		}
 	}
 
-	helloWorld({ name }: { name: string }): string {
+	greet({ name }: { name: string }): string {
 		return `Hello ${name}!`
 	}
 }
