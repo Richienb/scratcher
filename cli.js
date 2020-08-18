@@ -60,6 +60,7 @@ const commonOutputOptions = {
 module.exports = (async () => {
 	if (!await pathExists(source)) {
 		console.log(chalk.redBright("The input file does not exist!"))
+		return
 	}
 
 	if (action === "build") {
