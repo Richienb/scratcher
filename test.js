@@ -1,13 +1,8 @@
 const test = require("ava")
-const theModule = require(".")
+const pathExists = require("path-exists")
+const execa = require("execa")
 
-test("main", t => {
-	t.throws(() => {
-		theModule(123)
-	}, {
-		instanceOf: TypeError,
-		message: "Expected a string, got number"
-	})
-
-	t.is(theModule("unicorns"), "unicorns & rainbows")
+test("main", async t => {
+	await execa("./cli.js", ["build", "fixtures/index.ts", "fixtures/dist/index.min.js"])
+	t.true(await pathExists("fixtures/dist/index.min.js"))
 })

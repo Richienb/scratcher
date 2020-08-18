@@ -14,6 +14,7 @@ const { babel } = require("@rollup/plugin-babel")
 const closure = require("@ampproject/rollup-plugin-closure-compiler")
 const { nodeResolve } = require("@rollup/plugin-node-resolve")
 const commonjs = require("@rollup/plugin-commonjs")
+const typescript = require("@rollup/plugin-typescript")
 const serve = require("rollup-plugin-serve")
 
 updateNotifier({ pkg }).notify()
@@ -39,13 +40,9 @@ const [
 const commonPlugins = [
 	commonjs({ extensions: [".js", ".ts"] }),
 	nodeResolve({ browser: true }),
+	typescript({ target: "esnext" }),
 	babel({
 		presets: [
-			["@babel/preset-typescript", {
-				allowNamespaces: true,
-				allowDeclareFields: true,
-				onlyRemoveTypeImports: true
-			}],
 			["@babel/preset-env", {
 				targets: {
 					browsers: ["last 3 versions", "Safari >= 8", "iOS >= 8"]
