@@ -1,41 +1,21 @@
-# the-module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# scratcher [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/scratcher/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/scratcher)
 
-My awesome module.
+Scratch extension development tooling.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/scratcher.png)](https://npmjs.com/package/scratcher)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install --global scratcher
 ```
 
 ## Usage
 
-```js
-const theModule = require("the-module");
+```sh
+$ scratcher build
+√ Successfully built extension!
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+$ scratcher watch
+/ Waiting for changes
 ```
-
-## API
-
-### theModule(input, options?)
-
-#### input
-
-Type: `string`
-
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.

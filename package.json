@@ -1,14 +1,14 @@
 {
-	"name": "the-module",
+	"name": "scratcher",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Scratch extension development tooling.",
+	"repository": "https://github.com/Richienb/scratcher.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
-	"main": "index.js",
+	"bin": "cli.js",
 	"files": [
-		"index.js",
-		"index.d.ts"
+		"cli.js",
+		"utils"
 	],
 	"engines": {
 		"node": ">=10"
@@ -17,8 +17,33 @@
 		"lint": "xo",
 		"test": "xo && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"scratch",
+		"build",
+		"watch",
+		"environment",
+		"cli",
+		"tool",
+		"development"
+	],
+	"dependencies": {
+		"@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
+		"@babel/core": "^7.10.5",
+		"@babel/preset-env": "^7.10.4",
+		"@babel/preset-typescript": "^7.10.4",
+		"@rollup/plugin-babel": "^5.1.0",
+		"@rollup/plugin-commonjs": "^14.0.0",
+		"@rollup/plugin-node-resolve": "^8.4.0",
+		"chalk": "^4.1.0",
+		"exit-hook": "^2.2.0",
+		"meow": "^7.1.0",
+		"ora": "^5.0.0",
+		"path-exists": "^4.0.0",
+		"rollup": "^2.26.3",
+		"rollup-plugin-serve": "^1.0.3",
+		"scratch-gui": "SheepTester/scratch-gui#48d3860f0850b8070f7590812de7ce142012e772",
+		"update-notifier": "^4.1.1"
+	},
 	"devDependencies": {
 		"ava": "^3.10.1",
 		"eslint-config-richienb": "^0.4.2",
