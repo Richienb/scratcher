@@ -49,7 +49,12 @@ const commonPlugins = [
 				}
 			}]
 		],
-		babelHelpers: "bundled"
+		plugins: [
+			["@babel/plugin-transform-runtime", {
+				regenerator: true
+			}]
+		],
+		babelHelpers: "runtime"
 	})
 ]
 
