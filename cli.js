@@ -96,8 +96,7 @@ module.exports = (async () => {
 				serve({
 					open: true,
 					openPage: `?extension=${path.basename(outputFile)}`,
-					// TODO: Uncomment when https://github.com/thgh/rollup-plugin-serve/pull/64 is merged.
-					// verbose: false,
+					verbose: false,
 					contentBase: [
 						path.dirname(outputFile),
 						path.dirname(require.resolve("scratch-gui/lib.min"))
