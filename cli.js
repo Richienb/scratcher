@@ -19,7 +19,7 @@ const serve = require("rollup-plugin-serve")
 
 updateNotifier({ pkg }).notify()
 
-const { input } = meow(`
+const { input, showHelp } = meow(`
     Usage
 	  $ scratcher [build|watch] <source>
 
@@ -130,6 +130,6 @@ module.exports = (async () => {
 			watcher.close()
 		})
 	} else {
-		console.log(chalk.redBright("Invalid action! You can only specify `build` or `watch` as the first parameter."))
+		showHelp()
 	}
 })()
