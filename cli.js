@@ -9,7 +9,6 @@ const path = require("path")
 const updateNotifier = require("update-notifier")
 const exitHook = require("exit-hook")
 const getPort = require("get-port")
-const pkg = require("./package.json")
 
 const { babel } = require("@rollup/plugin-babel")
 const closure = require("@ampproject/rollup-plugin-closure-compiler")
@@ -18,19 +17,19 @@ const commonjs = require("@rollup/plugin-commonjs")
 const typescript = require("@rollup/plugin-typescript")
 const serve = require("rollup-plugin-serve")
 
-updateNotifier({ pkg }).notify()
+const { input, pkg, showHelp } = meow(`
+Usage
+$ scratcher [build|watch] <source>
 
-const { input, showHelp } = meow(`
-    Usage
-	  $ scratcher [build|watch] <source>
+Examples
+$ scratcher build
+√ ${chalk.green("Successfully built extension!")}
 
-    Examples
-      $ scratcher build
-	  √ ${chalk.green("Successfully built extension!")}
-
-	  $ scratcher watch
-	  ${chalk.cyan("/")} Waiting for changes
+$ scratcher watch
+${chalk.cyan("/")} Waiting for changes
 `)
+
+updateNotifier({ pkg }).notify()
 
 const [
 	action,
