@@ -98,7 +98,7 @@ module.exports = (async () => {
 					open: true,
 					openPage: `?extension=${path.basename(outputFile)}`,
 					verbose: false,
-					port: await getPort({port: 8080}),
+					port: await getPort({ port: 8080 }),
 					contentBase: [
 						path.dirname(outputFile),
 						path.dirname(require.resolve("scratch-gui/lib.min"))

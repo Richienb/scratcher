@@ -28,33 +28,41 @@
 	],
 	"dependencies": {
 		"@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
-		"@babel/core": "^7.11.4",
-		"@babel/plugin-transform-runtime": "^7.11.0",
-		"@babel/preset-env": "^7.11.0",
-		"@babel/runtime": "^7.11.2",
-		"@rollup/plugin-babel": "^5.2.0",
-		"@rollup/plugin-commonjs": "^15.0.0",
-		"@rollup/plugin-node-resolve": "^9.0.0",
-		"@rollup/plugin-typescript": "^5.0.2",
+		"@babel/core": "^7.12.9",
+		"@babel/plugin-transform-runtime": "^7.12.1",
+		"@babel/preset-env": "^7.12.7",
+		"@babel/runtime": "^7.12.5",
+		"@rollup/plugin-babel": "^5.2.2",
+		"@rollup/plugin-commonjs": "^17.0.0",
+		"@rollup/plugin-node-resolve": "^11.0.0",
+		"@rollup/plugin-typescript": "^8.0.0",
 		"chalk": "^4.1.0",
 		"exit-hook": "^2.2.0",
 		"get-port": "^5.1.1",
-		"meow": "^7.1.0",
-		"ora": "^5.0.0",
+		"meow": "^8.0.0",
+		"ora": "^5.1.0",
 		"path-exists": "^4.0.0",
-		"rollup": "^2.26.6",
+		"rollup": "^2.34.1",
 		"rollup-plugin-serve": "^1.1.0",
 		"scratch-gui": "SheepTester/scratch-gui#ca7b69cbae7f37870f05d6ccc1d1d32584918980",
-		"update-notifier": "^4.1.1"
+		"update-notifier": "^5.0.1"
 	},
 	"devDependencies": {
 		"@types/scratch-env": "^3.0.0",
-		"ava": "^3.12.1",
-		"eslint-config-richienb": "^0.4.2",
-		"execa": "^4.0.3",
-		"xo": "^0.33.0"
+		"ava": "^3.13.0",
+		"eslint-config-richienb": "^0.5.0",
+		"execa": "^5.0.0",
+		"xo": "^0.35.0"
 	},
 	"xo": {
-		"extends": "richienb"
+		"extends": "richienb",
+		"overrides": [
+			{
+				"files": "fixtures/index.ts",
+				"rules": {
+					"no-undef": "off"
+				}
+			}
+		]
 	}
 }
