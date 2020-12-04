@@ -8,6 +8,7 @@ const ora = require("ora")
 const path = require("path")
 const updateNotifier = require("update-notifier")
 const exitHook = require("exit-hook")
+const getPort = require("get-port")
 const pkg = require("./package.json")
 
 const { babel } = require("@rollup/plugin-babel")
@@ -97,6 +98,7 @@ module.exports = (async () => {
 					open: true,
 					openPage: `?extension=${path.basename(outputFile)}`,
 					verbose: false,
+					port: await getPort({port: 8080}),
 					contentBase: [
 						path.dirname(outputFile),
 						path.dirname(require.resolve("scratch-gui/lib.min"))
