@@ -43,7 +43,7 @@
 		"path-exists": "^4.0.0",
 		"rollup": "^2.26.6",
 		"rollup-plugin-serve": "^1.0.4",
-		"scratch-gui": "SheepTester/scratch-gui#48d3860f0850b8070f7590812de7ce142012e772",
+		"scratch-gui": "SheepTester/scratch-gui#ca7b69cbae7f37870f05d6ccc1d1d32584918980",
 		"update-notifier": "^4.1.1"
 	},
 	"devDependencies": {
