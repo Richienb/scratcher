@@ -1,4 +1,4 @@
-# scratcher [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/scratcher/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/scratcher)
+# scratcher
 
 Scratch extension development tooling.
 
